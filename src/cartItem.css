@@ -1,4 +1,8 @@
-.div{
-    display: inline-block;
-    display: inline;
+.action-icon{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+.action-icon:hover{
+    cursor: pointer;
 }

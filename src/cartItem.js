@@ -1,4 +1,5 @@
 import React from "react";
+import "./cartItem.css";
 
 
 class CartItem extends React.Component{
@@ -6,7 +7,7 @@ class CartItem extends React.Component{
         return(
             <div style={styles.border}>
                 <div style={item.itemRigt}>
-                    <img style={styles.Image} alt= "How"></img>
+                    <img style={styles.Image} alt=""></img>
                 </div>
                 <div style={item.itemRigt}>
                     <div><b>Phone</b> : 8851489319</div>
@@ -21,21 +22,27 @@ class CartItem extends React.Component{
 const styles ={
     border :{
         border : "thick solid #5b5bd7",
+        display:"-webkit-inline-box",
+        width:"-webkit-fill-available"
         
     },
     Image:{
-        height : 110,
+        height : 100,
         width:110,
-        borderRadius : 4
+        borderRadius : 4,
+        backgroundColor:"#c2f0f0"
     }
 }
 const item ={
     itemLeft:{
-        padding:10,
+        padding:39,
+        paddingTop:7
+        
     },
     itemRigt:{
-        padding:20,
-        display: "inline block",
+        paddingTop:15,
+        paddingLeft:17,
+        paddingBottom:6
     }
 }
 export default CartItem
