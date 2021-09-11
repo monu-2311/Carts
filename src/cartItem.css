@@ -6,3 +6,6 @@
 .action-icon:hover{
     cursor: pointer;
 }
+.cart-item-action{
+    margin-top: 20px;
+}
