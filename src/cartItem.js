@@ -52,13 +52,13 @@ class CartItem extends React.Component{
         }
         return(
             <div style={styles.border}>
-                <div style={item.itemRigt}>
+                <div style={item.itemLeft}>
                     <img style={styles.Image} alt=""></img>
                 </div>
                 <div style={item.itemRigt}>
-                    <div><b>{title}</b></div>
-                    <div> <b>Rs</b> :{Prices ? price*Qty : price} </div>
-                    <div><b>Qty</b>: {Qty}</div>
+                    <div style={{fontSize:"xxx-large"}}><b>{title}</b></div>
+                    <div style={{fontSize:"x-large"}}> <b>Rs</b> :{Prices ? price*Qty : price} </div>
+                    <div style={{fontSize:"x-large"}}><b>Qty</b>: {Qty}</div>
                     <div className="cart-item-action">
                         <img alt="increase" className="action-icon" src="https://image.flaticon.com/icons/png/512/1828/1828926.png" onClick={this.increeaseQty}/>
                         <img alt="decrease" className="action-icon" src="https://image.flaticon.com/icons/png/512/992/992683.png" onClick={this.decrease}/>
@@ -72,27 +72,25 @@ class CartItem extends React.Component{
 }
 const styles ={
     border :{
-        border : "thick solid #5b5bd7",
         display:"-webkit-inline-box",
-        width:"-webkit-fill-available"
         
     },
     Image:{
-        height : 106,
-        width:110,
+        height : 170,
+        width:170,
         borderRadius : 4,
-        backgroundColor:"#c2f0f0"
+        backgroundColor:"#9e9e9e61"
     }
 }
 const item ={
     itemLeft:{
         padding:39,
-        paddingTop:7
+        paddingTop:26
         
     },
     itemRigt:{
-        paddingTop:15,
-        paddingLeft:17,
+        paddingTop:12    ,
+        paddingLeft:0,
         paddingBottom:6
     }
 }

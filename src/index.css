@@ -22,3 +22,7 @@ code {
 .cart-item-action{
   margin-top: 10.5px;
 }
+.cart{
+  display: flex;
+  flex-direction: column;
+}
