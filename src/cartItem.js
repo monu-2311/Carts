@@ -1,18 +1,35 @@
 import React from "react";
-import "./cartItem.css";
+
 
 
 class CartItem extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            price:999,
+            title:"Phone",
+            Qty:1
+
+        }
+
+    }
     render(){ 
+        const{title,price,Qty}=this.state;
+        
         return(
             <div style={styles.border}>
                 <div style={item.itemRigt}>
                     <img style={styles.Image} alt=""></img>
                 </div>
                 <div style={item.itemRigt}>
-                    <div><b>Phone</b> : 8851489319</div>
-                    <div> <b>Rs</b> : 999</div>
-                    <div><b>Qty</b>: 1</div>
+                    <div><b>Phone</b> : {price}</div>
+                    <div> <b>Rs</b> : {Qty}</div>
+                    <div><b>Qty</b>: {title}</div>
+                    <div className="cart-item-action">
+                        <img alt="increase" className="action-icon" src="https://image.flaticon.com/icons/png/512/1828/1828926.png"/>
+                        <img alt="decrease" className="action-icon" src="https://image.flaticon.com/icons/png/512/992/992683.png"/>
+                        <img alt="delete" className="action-icon" src="https://image.flaticon.com/icons/png/512/3096/3096687.png"/>
+                    </div>
                 </div>
             </div>
         
@@ -27,7 +44,7 @@ const styles ={
         
     },
     Image:{
-        height : 100,
+        height : 106,
         width:110,
         borderRadius : 4,
         backgroundColor:"#c2f0f0"
