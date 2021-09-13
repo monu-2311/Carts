@@ -3,17 +3,7 @@ import React from "react";
 //if we want to change any things in state object we use setstate to change in state
 //setstate it's the react fuction 
 class CartItem extends React.Component{
-    constructor(){
-        super();
-        this.state={
-            price:999,
-            title:"Phone",
-            Qty:1
-            
-        }
-        //this.increeaseQty= this.increeaseQty.bind(this);
-
-    }   
+     
      increeaseQty=()=>{
         console.log("this",this);
         //setState form -1 in which we give the object to it
@@ -45,9 +35,9 @@ class CartItem extends React.Component{
     }
 
     render(){ 
-        const{title,price,Qty}=this.state;
+        const{title,price,Qty}=this.props.product;
         var Prices =true;
-        if(this.state.Qty === 0){
+        if(Qty === 0){
             Prices=false;
         }
         return(
