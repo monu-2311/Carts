@@ -33,7 +33,11 @@ class Cart extends React.Component{
         return(<div className="cart">
             {
                 products.map((product)=>{
-                    return <CartItem product={product}/>
+                    return 
+                        <CartItem 
+                            product={product}
+                            key={product.id}
+                        />
                 })
             }
         </div>
