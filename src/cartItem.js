@@ -41,7 +41,7 @@ class CartItem extends React.Component{
 
     render(){ 
         const{title,price,Qty}=this.props.product;
-        const{onIncreaseQuntity,OnDecreaseQuntity,product}= this.props;
+        const{onIncreaseQuntity,OnDecreaseQuntity,product,ondeleteProduct}= this.props;
         var Prices =true;
         if(this.props.product.Qty === 0){
             Prices=false;
@@ -58,7 +58,7 @@ class CartItem extends React.Component{
                     <div className="cart-item-action">
                         <img alt="increase" className="action-icon" src="https://image.flaticon.com/icons/png/512/1828/1828926.png" onClick={()=>onIncreaseQuntity(product)}/>
                         <img alt="decrease" className="action-icon" src="https://image.flaticon.com/icons/png/512/992/992683.png" onClick={()=>OnDecreaseQuntity(product)}/>
-                        <img alt="delete" className="action-icon" src="https://image.flaticon.com/icons/png/512/3096/3096687.png"/>
+                        <img alt="delete" className="action-icon" src="https://image.flaticon.com/icons/png/512/3096/3096687.png" onClick={()=>ondeleteProduct(product.id)}/>
                     </div>
                 </div>
             </div>
