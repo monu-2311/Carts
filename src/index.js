@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-import Cart from './cart';
-import NavBar from './navBar';
+import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar/>
-    <Cart/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
