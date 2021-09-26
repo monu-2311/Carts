@@ -10,7 +10,7 @@ const CartItem=(props)=>{
         return(
             <div style={styles.border}>
                 <div style={item.itemLeft}>
-                    <img style={styles.Image} alt=""></img>
+                    <img style={styles.Image} alt="" src={product.img} />
                 </div>
                 <div style={item.itemRigt}>
                     <div style={{fontSize:"xxx-large"}}><b>{title}</b></div>
